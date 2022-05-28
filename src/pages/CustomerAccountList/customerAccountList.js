@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import NavbarContent from '../../components/NavbarContent';
 import TableCustomerAccount from '../../components/TableCustomerAccount';
-import { getCustomerAccount } from '../../services/customerGetServices';
+import { getCustomerAccount } from '../../services/customerGetAccountServices';
+
 
 const CustomerAccountList = () => {
     const [customerAccount, setCustomerAccount] = useState()
 
     //? customerId alındı.
     const params = useParams();
-    console.log("Params",params.CustomerId)
 
     const getData = async (params) => {
         const res = await getCustomerAccount(params)
-        console.log("Data",res)
-        setCustomerAccount(res.Result)
+        setCustomerAccount(res?.Result)
     }
 
     useEffect(() => {
@@ -22,7 +22,10 @@ const CustomerAccountList = () => {
 
    
     return (
-       <TableCustomerAccount customerAccount={customerAccount} />
+        <>
+            <NavbarContent />
+            <TableCustomerAccount customerAccount={customerAccount} />
+        </>
     )
 }
 
