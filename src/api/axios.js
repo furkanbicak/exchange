@@ -8,5 +8,6 @@ export const URL = {
     forgotPassword  :   '/api/User/ForgotPassword',
     changePassword  :   '/api/User/ChangePassword',
     customer        :   '/api/v1/FinTech/Execute',
+    passwordChange  :   '/api/User/ForgotPasswordChange',
 
 }
