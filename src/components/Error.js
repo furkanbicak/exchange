@@ -23,7 +23,7 @@ const Error = () => {
                 </div>
                 <div className = 'row'>
                     <div className = 'col d-flex justify-content-center'>
-                        <Button className = 'w-25' onClick={() => navigate(-1)}>Go Back</Button>
+                        <Button className = 'w-25' onClick={() => navigate('/login')}>Go Back</Button>
                     </div>
                 </div>
             </div>
