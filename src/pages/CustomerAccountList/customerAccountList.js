@@ -24,7 +24,7 @@ const CustomerAccountList = () => {
     return (
         <>
             <NavbarContent />
-            <TableCustomerAccount customerAccount={customerAccount} />
+            <TableCustomerAccount customerAccount = { customerAccount } />
         </>
     )
 }
