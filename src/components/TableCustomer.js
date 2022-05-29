@@ -53,8 +53,7 @@ const TableCustomer = ( { customer } ) => {
                                                 <Badge pill bg='success'>
                                                     Active
                                                 </Badge>  
-                                            ) : 
-                                            (
+                                            ) : (
                                                 <Badge pill bg='danger'>
                                                     Not Active
                                                 </Badge>  
