@@ -42,16 +42,16 @@ const Login = () => {
             Swal.fire({
                 timer               :   1500,
                 showConfirmButton   :   false,
-                position            :   'top-end',
                 icon                :   'success',
+                position            :   'top-end',
                 title               :   'Giriş başarılı. Hoşgeldin.🤩',
             })
            } else {
             Swal.fire({
                 timer               :   1500,
                 showConfirmButton   :   false,
-                position            :   'top-end',
                 icon                :   'error',
+                position            :   'top-end',
                 title               :   response?.data.Result.Message,
                 })
            }
