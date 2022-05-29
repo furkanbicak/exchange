@@ -23,8 +23,8 @@ const NavbarContent = () => {
                     Fintech
                 </Navbar.Brand>
                 <Nav className='me-auto'>
-                    <Nav.Link className = 'text-white' onClick={ ()=>navigate('/home') }>Home</Nav.Link>
-                    <Nav.Link className = 'text-white' onClick={ ()=>navigate('/account') }>Account</Nav.Link>
+                    <Nav.Link className = 'text-white fw-bold ps-3' onClick = { () => navigate('/home') }>Home</Nav.Link>
+                    <Nav.Link className = 'text-white fw-bold ps-3' onClick = { () => navigate('/account') }>Account</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
