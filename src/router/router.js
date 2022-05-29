@@ -20,6 +20,7 @@ const Router = () => {
                 <Route path='/' element={<Layout />}>
                     <Route path="/login" element={<Login />} />
                     <Route path="/forgotPassword" element={<ForgotPassword />} />
+                    <Route path="/ForgotPasswordChange" element={<ForgotPasswordChange />} />
                     <Route path="/unauthorized" element={<Unauthorized />} />
                 </Route>
                 
@@ -28,7 +29,6 @@ const Router = () => {
                     <Route path="/home" element={<Home />} />
                     <Route path="/account" element={<Account />} />
                     <Route path="/table-account-list/:CustomerId" element={<CustomerAccountList />} />
-                    <Route path="/ForgotPasswordChange" element={<ForgotPasswordChange />} />
                 </Route>
             </Routes>
         </>
