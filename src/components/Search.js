@@ -41,7 +41,7 @@ const Search = ( { setCustomer, searchData } ) => {
   return (
       
     <div className = 'shadow-lg p-3 mb-5 bg-white rounded'>  
-        <div className='d-flex justify-content-end'>
+        <div className = 'd-flex justify-content-end'>
             <CloseButton />
         </div>
         <div className = 'd-flex justify-content-center row mb-4' style={{gap:'100px'}}>
@@ -56,7 +56,7 @@ const Search = ( { setCustomer, searchData } ) => {
             </div>
 
             <div className = 'col-md-5'>
-                <Form.Label className='text-primary'> General Search </Form.Label>
+                <Form.Label className = 'text-primary'> General Search </Form.Label>
                 <Form.Control 
                     size        =   'lg'
                     type        =   'text' 
