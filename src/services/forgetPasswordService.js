@@ -18,7 +18,7 @@ export const forgetPassword = async (email) => {
                 error   : 'Data gelmedi'
             }
         }
-       
+        
     } catch (error) {
         console.log('error', error)
     }
