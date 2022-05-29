@@ -1,27 +1,25 @@
-import axios, { URL } from "../api/axios";
+import axios, { URL } from '../api/axios'
 
-let formData = new FormData();    //formdata object
 
-//? Service that brings products.
+//? Şifre yenileme bağlantısı gönderen servis.
 export const forgetPassword = async (email) => {
-    console.log("first",email)
-    formData.append('Email', email);   //append the values with key, value pair
+    const formData = new FormData();    
+
+    formData.append('Email', email);   
     try {
         const res = await axios.post(URL.forgotPassword, formData, { 
-            'content-type': 'multipart/form-data' 
+            'content-type'  :   'multipart/form-data' 
         });
         
-        if(res.status === 200){
-            console.log("Data", res.data)
+        if (res.status === 200) {
             return res.data
-        } 
-        else{
+        } else {
             return {
-                error: 'Data gelmedi'
+                error   : 'Data gelmedi'
             }
         }
        
     } catch (error) {
-        console.log("error")
+        console.log('error', error)
     }
 }
