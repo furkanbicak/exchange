@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Container, Form, Row, Button} from 'react-bootstrap'
-import loginIcon from '../../src/assets/login.svg'
+import loginIcon from '../../src/assets/token.svg'
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 import { Formik } from 'formik';
