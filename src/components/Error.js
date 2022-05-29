@@ -9,24 +9,24 @@ const Error = () => {
     
     return (
        <>
-       <div class="container">
-            <div class="row">
-                <div class="col d-flex justify-content-center">
-                    <img
-                        alt         =   'navbarIcon'
-                        src         =   { ErrorIcon }
-                        width       =   '700'
-                        height      =   '700'
-                        className   =   'd-inline-block align-top w-75'
-                    />
+            <div className = 'container'>
+                <div className = 'row'>
+                    <div className = 'col d-flex justify-content-center'>
+                        <img
+                            alt         =   'navbarIcon'
+                            src         =   { ErrorIcon }
+                            width       =   '700'
+                            height      =   '700'
+                            className   =   'd-inline-block align-top w-75'
+                        />
+                    </div>
+                </div>
+                <div className = 'row'>
+                    <div className = 'col d-flex justify-content-center'>
+                        <Button className = 'w-25' onClick={() => navigate(-1)}>Go Back</Button>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col d-flex justify-content-center">
-                    <Button className='w-25' onClick={() => navigate(-1)}>Go Back</Button>
-                </div>
-            </div>
-        </div>
        </>
     )
 }
