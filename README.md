@@ -16,6 +16,7 @@ Project live demo link...
 ## 🔨 Technologies Used
 
 - ReactJS
+- Redux
 - Axios
 - react-router-dom
 - ContextApi
@@ -50,5 +51,6 @@ This is very easy! All you have to do is enter the name of the people name you a
 
 
 ## 🤩 Screenshots
+![localhost_3000_home](https://user-images.githubusercontent.com/80355473/170902590-6bce806d-fbf6-4094-a7bf-c74449a77d12.png)
 
 
