@@ -2,9 +2,8 @@ import { Badge, Table } from 'react-bootstrap'
 
 
 const TableCustomerAccount = ( { customerAccount } ) => {
-    console.log('YEEES', customerAccount && customerAccount.length === 0 ? 'yes' : null)
- 
 
+    
   return (
     <div className='w-75 mb-5 mt-5 m-auto shadow p-3 mb-5 bg-white rounded'>
         <Table hover >
