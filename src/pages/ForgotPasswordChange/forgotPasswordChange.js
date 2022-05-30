@@ -5,7 +5,6 @@ import { forgotChangePassword } from '../../services/forgotChangePassword'
 
 
 const ForgotPasswordChange = () => {
-
     //? Mailden gelen url'deki 'param' keyinin value değerini yakalar.
     const urlParams = new URLSearchParams(window.location.search)
     const param = urlParams.get('param')

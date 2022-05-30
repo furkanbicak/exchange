@@ -6,23 +6,23 @@ import TableCustomer from '../../components/TableCustomer'
 import { getCustomer } from '../../services/customerGetServices'
 
 const Home = () => {
-	const [customer, setCustomer] = useState()						//? Servisten gelen datayı kaydetmek için. 
-	const [searchData, setSearchData] = useState()					//? Search İşleminde kullanılan search edilen data.      
-	const [loading, setloading] = useState(true)					//? Sayfa Loading işlemi için.
+	const [customer, setCustomer] = useState()					//? Servisten gelen datayı kaydetmek için. 
+	const [searchData, setSearchData] = useState()				//? Search için kullanılan search edilen data.      
+	const [loading, setloading] = useState(true)				//? Sayfa Loading işlemi için.
 
 
-	useEffect(()=>{
-		getData()
-	},[])
-
-
+	//? Müşteri listlerini getiren servisi çağırır.
 	const getData = async () => {
 		const res = await getCustomer()
 		setCustomer(res.Result)
 		setSearchData(res.Result)
 		setloading(false)
-		console.log("cevap",res.Result)
 	}
+
+
+	useEffect(()=>{
+		getData()
+	},[])
 
 	
 return (
@@ -36,14 +36,10 @@ return (
 					searchData	=	{ searchData } 
 					setCustomer	=	{ setCustomer } 
 				/>
-				<TableCustomer 
-					customer	=	{ customer } 
-				/>
-			</>
-					
+				<TableCustomer customer	= { customer } />
+			</>		
 		}
-		</div>
-		
+		</div>	
 	</>
 	
 )
