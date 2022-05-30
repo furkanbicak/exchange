@@ -4,6 +4,7 @@ import NavbarContent from '../../components/NavbarContent';
 import TableCustomerAccount from '../../components/TableCustomerAccount';
 import { getCustomerAccount } from '../../services/customerGetAccountServices';
 
+
 const CustomerAccountList = () => {
     const [customerAccount, setCustomerAccount] = useState()
 
