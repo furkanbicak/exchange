@@ -78,8 +78,6 @@ const Login = () => {
             console.log('Data Yok!',err)
         }
     }
-
-
         return (
             <AuthForm loginSubmit = { loginSubmit } />
     )

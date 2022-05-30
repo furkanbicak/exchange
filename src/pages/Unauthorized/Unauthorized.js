@@ -2,11 +2,9 @@ import Error from '../../components/Error'
 
 
 const Unauthorized = () => {
-  return (
-   <>
+    return (
         <Error />
-   </>
-  )
+    )
 }
 
 export default Unauthorized

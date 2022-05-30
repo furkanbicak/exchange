@@ -16,7 +16,7 @@ const Router = () => {
     return (
         <>
             <Routes>
-                {/* public routes */}
+                //? Punlic routes
                 <Route path='/' element={<Layout />}>
                     <Route path="/login" element={<Login />} />
                     <Route path="/forgotPassword" element={<ForgotPassword />} />
@@ -24,7 +24,7 @@ const Router = () => {
                     <Route path="/unauthorized" element={<Unauthorized />} />
                 </Route>
                 
-                {/* private routes */}
+                //? Private routes 
                 <Route element={<RequireAuth />}>
                     <Route path="/home" element={<Home />} />
                     <Route path="/account" element={<Account />} />
