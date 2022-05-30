@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2'
 import ForgetForm from '../../components/ForgetForm'
-import { forgetPassword } from '../../services/forgetPasswordService';
+import { forgetPassword } from '../../services/forgetPasswordService'
 
 const ForgotPassword = () => {
-    const [forgetEmail, setForgetEmail] = useState();
+    const [forgetEmail, setForgetEmail] = useState()
 
     //? Şifre değiştirme bağlantısı isteği için fonksiyon.
     const handleSubmit = async (e) => {
