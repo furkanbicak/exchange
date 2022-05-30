@@ -17,7 +17,6 @@ const ForgotPasswordChange = () => {
         const password = e.password
 
         const res = await forgotChangePassword(param, email, password)
-        console.log("Şifre Değişti:", res)
 
 
         //? İşlem başarılı ise success alert.

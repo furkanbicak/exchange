@@ -4,8 +4,6 @@ import axios, { URL } from '../api/axios'
 //? Login olmak için kullanılan servis.
 export const postLogin = async ( user, password ) => {
 
-    console.log('first',user,password)
-
     const formData = new FormData()
 
     formData.append('Email', user)   

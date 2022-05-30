@@ -3,9 +3,6 @@ import axios, { URL } from '../api/axios'
 
 //? Şifre değiştirme servisi.
 export const getChangePassword = async ( email, currentPassword, password ) => {
-    console.log("Email",email)
-    console.log("currentPassword",currentPassword)
-    console.log("password",password)
 
     const formData = new FormData()
    
