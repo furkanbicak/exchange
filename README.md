@@ -57,6 +57,11 @@ This is very easy! All you have to do is enter the name of the people name you a
 
 ![localhost_3000_account](https://user-images.githubusercontent.com/80355473/170965124-f59ef83d-f7a1-499b-a884-7070a943c544.png)
 
+![localhost_3000_account](https://user-images.githubusercontent.com/80355473/170965414-8386842b-9aef-4c76-b3dc-68afcf606f89.png)
+
+![localhost_3000_account](https://user-images.githubusercontent.com/80355473/170965558-a6a7eb43-76ef-48bf-9857-a8b4bab6cf2c.png)
+
+
 
 
 
