@@ -1,5 +1,6 @@
 import { Badge, Table } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import Avatar from '../assets/avatar.jpeg'
 
 
 const TableCustomer = ( { customer } ) => {
@@ -36,7 +37,7 @@ const TableCustomer = ( { customer } ) => {
                                         <div className = 'd-flex align-items-center'>
                                         <img
                                             alt         =   'userimage'
-                                            src         =   'https://mdbootstrap.com/img/new/avatars/2.jpg'
+                                            src         =   {Avatar}
                                             style       =   {{widt:'45px', height:'45px'}}
                                             className   =   'rounded-circle'
                                             />

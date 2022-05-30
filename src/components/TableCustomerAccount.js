@@ -1,4 +1,5 @@
 import { Badge, Table } from 'react-bootstrap'
+import Avatar from '../assets/avatar.jpeg'
 
 
 const TableCustomerAccount = ( { customerAccount } ) => {
@@ -27,8 +28,8 @@ const TableCustomerAccount = ( { customerAccount } ) => {
                                         <div className='d-flex align-items-center'>
                                             <img
                                                 alt         =   'userimage'
-                                                src         =   'https://mdbootstrap.com/img/new/avatars/2.jpg'
-                                                style       =   {{widt:'45px', height:'45px'}}
+                                                src         =   { Avatar }
+                                                style       =   { {widt:'45px', height:'45px'} }
                                                 className   =   'rounded-circle'
                                             />
                                             <div className = 'ms-3'>
