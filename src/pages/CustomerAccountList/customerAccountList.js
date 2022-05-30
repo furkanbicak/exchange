@@ -4,13 +4,13 @@ import NavbarContent from '../../components/NavbarContent';
 import TableCustomerAccount from '../../components/TableCustomerAccount';
 import { getCustomerAccount } from '../../services/customerGetAccountServices';
 
-
 const CustomerAccountList = () => {
     const [customerAccount, setCustomerAccount] = useState()
 
-    //? customerId alındı.
+    //? Müşteri customerId alındı.
     const params = useParams();
 
+    //? Müşteri customerId'ye göre hesapları listeleyen fonksiyon.
     const getData = async (params) => {
         const res = await getCustomerAccount(params)
         setCustomerAccount(res?.Result)
