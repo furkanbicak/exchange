@@ -1,4 +1,3 @@
-
 import {combineReducers} from 'redux'
 
 const initialState={
@@ -6,7 +5,7 @@ const initialState={
 }
 
 const initialUserState={
-    arr:[]
+    arr:[],
 }
 
 function rootReducer(state=initialState, action){
