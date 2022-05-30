@@ -15,7 +15,7 @@ const TableCustomer = ( { customer } ) => {
 
 
     return (
-        <div className = 'mb-5 mt-5 m-auto shadow p-3 mb-5 bg-white rounded'>
+        <div className = 'mb-5 mt-5 m-auto shadow p-3 mb-5 bg-white rounded table-responsive'>
             <Table hover style={{ borderCollapse: "separate", borderSpacing:"0 20px"}}>
                 <thead>
                     <tr>

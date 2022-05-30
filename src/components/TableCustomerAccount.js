@@ -6,7 +6,7 @@ const TableCustomerAccount = ( { customerAccount } ) => {
 
     
   return (
-    <div className='w-75 mb-5 mt-5 m-auto shadow p-3 mb-5 bg-white rounded'>
+    <div className='w-75 mb-5 mt-5 m-auto shadow p-3 mb-5 bg-white rounded table-responsive'>
         <Table hover >
             <thead>
                 <tr>
