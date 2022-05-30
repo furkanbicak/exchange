@@ -12,87 +12,93 @@ const AuthForm = ({ loginSubmit }) => {
 
     return (
         <>
-            <Container>
-                <Row className = 'mt-5 shadow p-3 mb-5 bg-white rounded m-auto'>
-                    <Col lg={5} md={6} sm={12} className = 'p-5 m-auto'>
-                        <img 
+            <div className="d-flex justify-content-center align-items-center" style={{height:'100vh'}}>
+                <Container>
+                    <Row className = 'mt-5 shadow p-3 mb-5 bg-white rounded m-auto'>
+                        <Col lg={5} md={6} sm={12} className = 'p-5 m-auto'>
+                            <img 
                                 src         =   { loginIcon } 
                                 alt         =   'loginIcon'
                                 className   =   'w-100 rounded mx-auto d-block mt-5' 
                             />
-                    </Col>
-                    <Formik
-                        initialValues={{
-                            email:'',
-                            password:''
-                        }}
+                            </Col>
+                            <Formik
+                                initialValues={{
+                                    email:'',
+                                    password:''
+                                }}
 
-                        validationSchema={ LoginSchema }
-                        
-                        onSubmit={(values) => {
-                            loginSubmit(values)
-                        }}
-                    >
-                        {
-                            ({values, errors, touched, handleSubmit, handleChange, handleBlur}) => (
-                                <Col lg={5} md={6} sm={12} className = 'p-5 m-auto'>
-                                    <h1 className = 'my-5 font-weight-bold text-primary'>Login</h1>
-                                    <Form className = 'mb-5' onSubmit = {handleSubmit}>
-                                        <Form.Group className='mt-5' controlId='formBasicEmail'>
-                                            <Form.Label>Email address</Form.Label>
-                                            <Form.Control 
-                                                type        =   'email' 
-                                                name        =   'email' 
-                                                value       =   { values.email }  
-                                                onBlur      =   { handleBlur } 
-                                                onChange    =   { handleChange } 
-                                                placeholder =   'Enter email' 
-                                            />
-                                                {
-                                                    errors.email && touched.email && (
-                                                        <Form.Label className = 'text-danger mt-2'>
-                                                            *{errors.email}
-                                                        </Form.Label>
-                                                    )
-                                                }
-                                        </Form.Group>
+                                validationSchema={ LoginSchema }
+                                
+                                onSubmit={(values) => {
+                                    loginSubmit(values)
+                                }}
+                            >
+                                {
+                                    ({values, errors, touched, handleSubmit, handleChange, handleBlur}) => (
+                                        <Col lg={5} md={6} sm={12} className = 'p-5 m-auto'>
+                                            <h1 className = 'my-5 font-weight-bold text-primary'>Login</h1>
+                                            <Form className = 'mb-5' onSubmit = {handleSubmit}>
+                                                <Form.Group className='mt-5' controlId='formBasicEmail'>
+                                                    <Form.Label>Email address</Form.Label>
+                                                    <Form.Control 
+                                                        type        =   'email' 
+                                                        name        =   'email' 
+                                                        value       =   { values.email }  
+                                                        onBlur      =   { handleBlur } 
+                                                        onChange    =   { handleChange } 
+                                                        placeholder =   'Enter email' 
+                                                    />
+                                                        {
+                                                            errors.email && touched.email && (
+                                                                <Form.Label className = 'text-danger mt-2'>
+                                                                    *{errors.email}
+                                                                </Form.Label>
+                                                            )
+                                                        }
+                                                </Form.Group>
 
-                                        <Form.Group className='mt-4' controlId='formBasicPassword'>
-                                            <Form.Label>Password</Form.Label>
-                                            <Form.Control 
-                                                type        =   'password' 
-                                                name        =   'password' 
-                                                value       =   { values.password }  
-                                                onBlur      =   { handleBlur } 
-                                                onChange    =   { handleChange }
-                                                placeholder =   'Enter Password' 
-                                            />
-                                                {
-                                                    errors.password && touched.password && (
-                                                        <Form.Label className = 'text-danger mt-2'>
-                                                            *{errors.password}
-                                                        </Form.Label> 
-                                                    )
-                                                }
-                                        </Form.Group>
+                                                <Form.Group className='mt-4' controlId='formBasicPassword'>
+                                                    <Form.Label>Password</Form.Label>
+                                                    <Form.Control 
+                                                        type        =   'password' 
+                                                        name        =   'password' 
+                                                        value       =   { values.password }  
+                                                        onBlur      =   { handleBlur } 
+                                                        onChange    =   { handleChange }
+                                                        placeholder =   'Enter Password' 
+                                                    />
+                                                        {
+                                                            errors.password && touched.password && (
+                                                                <Form.Label className = 'text-danger mt-2'>
+                                                                    *{errors.password}
+                                                                </Form.Label> 
+                                                            )
+                                                        }
+                                                </Form.Group>
 
-                                        <Form.Group className = 'mt-3' controlId='formBasicPassword'>
-                                            <Link to={'/forgotPassword'} className='link-primary'>Forget Password?</Link>
-                                        </Form.Group>
+                                                <Form.Group className = 'mt-3' controlId='formBasicPassword'>
+                                                    <Link to={'/forgotPassword'} className='link-primary'>Forget Password?</Link>
+                                                </Form.Group>
 
-                                        <Button variant='primary w-100 mt-5' type='submit' onClick={handleSubmit}>
-                                            Login
-                                        </Button>
-                                    </Form>
-                                </Col>
-                            )
-                        }
-                    </Formik>
-                </Row>
-                <h6 className='text-center text-secondary'>Copyright © 2022 Fintech. All Rights Reserved.</h6>
-            </Container>
+                                                <Button variant='primary w-100 mt-5' type='submit' onClick={handleSubmit}>
+                                                    Login
+                                                </Button>
+                                            </Form>
+                                        </Col>
+                                    )
+                                }
+                            </Formik>
+                        </Row>
+                        <h6 className='text-center text-secondary'>Copyright © 2022 Fintech. All Rights Reserved.</h6>
+                    </Container>
+            </div>
         </>
   )
 }
 
 export default AuthForm
+
+
+
+
