@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 import 'bootstrap/dist/css/bootstrap.css'
 import jwt from 'jwt-decode'
 import { useDispatch } from 'react-redux'
+import { postLogin } from '../../services/loginServices'
 
 
 const Login = () => {
@@ -23,60 +24,50 @@ const Login = () => {
         const user = e.email
         const password = e.password
 
-        const formData = new FormData()
-        formData.append('Email', e.email)
-        formData.append('Password', e.password)
-        formData.append('LoginType', '50dcd869-eeb3-ec11-ac1f-000c29330757')
+        const response = await postLogin(user, password)
 
-        try {
-            const response = await axios.post(URL.login, formData, { 
-                    'content-type': 'multipart/form-data' 
+        const isSuccess =  response?.IsSuccess 
+        const accessToken = response?.Result.AccessToken
+
+        //?Auth Context Provider'a bilgiler set edilir.
+        setAuth({ user, password, accessToken, isSuccess })
+            
+        navigate(from, { replace : true })
+
+
+        //? Alert giriş başarılı ise redux ve allert.
+        if (isSuccess === true) {
+
+            //? Token decode edilir.
+            const jwtDecoded = jwt(accessToken)
+
+            dispatch({
+                type:'SET_TOKEN',
+                payload:accessToken
+            })
+                
+            dispatch({
+                type:'SET_ARR',
+                payload: jwtDecoded
             })
 
-            const isSuccess =  response?.data.IsSuccess 
-            const accessToken = response?.data.Result.AccessToken
-
-            //?Auth Context Provider'a bilgiler set edilir.
-            setAuth({ user, password, accessToken, isSuccess })
+            Swal.fire({
+                timer               :   1500,
+                showConfirmButton   :   false,
+                icon                :   'success',
+                position            :   'top-end',
+                title               :   'Giriş başarılı. Hoşgeldin.🤩',
+            })
             
-            navigate(from, { replace : true })
-
-
-            //? Alert giriş başarılı ise redux ve allert.
-            if (isSuccess === true) {
-                //? Token decode edilir.
-                const jwtDecoded = jwt(accessToken)
-
-                dispatch({
-                    type:'SET_TOKEN',
-                    payload:accessToken
-                })
-                
-                dispatch({
-                    type:'SET_ARR',
-                    payload: jwtDecoded
-                })
-
-                Swal.fire({
-                    timer               :   1500,
-                    showConfirmButton   :   false,
-                    icon                :   'success',
-                    position            :   'top-end',
-                    title               :   'Giriş başarılı. Hoşgeldin.🤩',
-                })
-            } else {
-                Swal.fire({
-                    timer               :   1500,
-                    showConfirmButton   :   false,
-                    icon                :   'error',
-                    position            :   'top-end',
-                    title               :   response?.data.Result.Message,
-                })
-            }
-            
-        } catch (err) {
-            console.log('Data Yok!',err)
-        }
+        } else {
+            Swal.fire({
+                timer               :   1500,
+                showConfirmButton   :   false,
+                icon                :   'error',
+                position            :   'top-end',
+                title               :   response?.Result.Message,
+            })
+        }    
     }
         return (
             <AuthForm loginSubmit = { loginSubmit } />
