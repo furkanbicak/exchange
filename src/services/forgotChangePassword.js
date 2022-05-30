@@ -16,7 +16,6 @@ export const forgotChangePassword = async (param, email, password) => {
         });
         
         if(res.status === 200){
-            console.log("Data", res.data)
             return res.data
         } 
         else{

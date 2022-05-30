@@ -16,7 +16,6 @@ export const getCustomerAccount = async (id) => {
         })
         
         if(res.status === 200){
-            console.log('Data', res.data)
             return res.data
         } 
         else{
