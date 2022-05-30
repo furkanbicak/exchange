@@ -59,7 +59,8 @@ Sisteme kayıtlı mail adresiniz ile başarılı bir şekilde login olduktan son
 
 ![localhost_3000_account](https://user-images.githubusercontent.com/80355473/170965414-8386842b-9aef-4c76-b3dc-68afcf606f89.png)
 
-![localhost_3000_account](https://user-images.githubusercontent.com/80355473/170965558-a6a7eb43-76ef-48bf-9857-a8b4bab6cf2c.png)
+![localhost_3000_table-account-list_754FFAEB-D1C2-EC11-AC1F-000C29330757](https://user-images.githubusercontent.com/80355473/170967735-0e335636-c258-4748-89f8-7fae1eb16c8d.png)
+
 
 
 
