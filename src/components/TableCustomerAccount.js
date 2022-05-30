@@ -11,10 +11,10 @@ const TableCustomerAccount = ( { customerAccount } ) => {
             <thead>
                 <tr>
                     <th className = 'w-20'>ID</th>
-                    <th className = 'w-25'>First Name</th>
-                    <th className = 'w-25'>Last Name</th>
-                    <th className = 'w-25'>Customer Id</th>
-                    <th className = 'w-25'>Is Active</th>
+                    <th className = 'w-20'>First Name</th>
+                    <th className = 'w-20'>Last Name</th>
+                    <th className = 'w-20'>Customer Id</th>
+                    <th className = 'w-20'>Is Active</th>
                 </tr>
             </thead>
             <tbody>
