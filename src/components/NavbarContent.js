@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import loginIcon from '../../src/assets/login.svg'
+import navIcon from '../../src/assets/navIcon.svg'
 
 
 const NavbarContent = () => {
@@ -15,7 +15,7 @@ const NavbarContent = () => {
                 <Navbar.Brand href='/home'>
                     <img
                         alt         =   'navbarIcon'
-                        src         =   { loginIcon }
+                        src         =   { navIcon }
                         width       =   '50'
                         height      =   '50'
                         className   =   'd-inline-block align-top'
