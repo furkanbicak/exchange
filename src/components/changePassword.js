@@ -5,11 +5,14 @@ import loginIcon from '../../src/assets/login.svg'
 import axios, { URL } from '../api/axios'
 import { Formik } from 'formik';
 import { LoginSchema } from '../constans/changePsYupSchema'
+import { useNavigate } from 'react-router-dom'
 
 
 const ChangePassword = () => {
+    const navigate = useNavigate();
 
     const changePassword = async(e) => {
+
         const formData = new FormData()
    
         formData.append('Email', `${e.email}`)
@@ -28,6 +31,7 @@ const ChangePassword = () => {
                     position            :   'top-end',
                     title               :   'İşleminiz başarıyla gerçekleşti.',
                   })
+                  navigate('/home')
             } else {
                 Swal.fire({
                     timer               :   1500,
@@ -50,6 +54,7 @@ const ChangePassword = () => {
             console.log('error')
         }
     }
+
 
     return (
         <>

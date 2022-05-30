@@ -1,5 +1,6 @@
 import * as Yup from 'yup'
 
+
 export const LoginSchema = Yup.object().shape({
     email : Yup
         .string()
@@ -8,5 +9,4 @@ export const LoginSchema = Yup.object().shape({
     password : Yup
         .string()
         .required('Bu alan zorunludur.'),
-    
 })
