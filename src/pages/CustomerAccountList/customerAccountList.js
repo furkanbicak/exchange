@@ -8,7 +8,7 @@ import { getCustomerAccount } from '../../services/customerGetAccountServices';
 const CustomerAccountList = () => {
     const [customerAccount, setCustomerAccount] = useState()
 
-    //? Müşteri customerId alındı.
+    //? Gelen Url'den müşteri customerId alınır.
     const params = useParams();
 
     //? Müşteri customerId'ye göre hesapları listeleyen fonksiyon.
