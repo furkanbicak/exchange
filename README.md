@@ -3,17 +3,15 @@
 ## Live Demo
 Project live demo link...
 
-## ✨ Features
+## ✨ Özellikler
+- Giriş ekranında login olma.
+- Şifremi unuttum kısmından mail adresine şifre değiştirme bağlantısı alma.
+- Giriş yaptıkdan sonra hesabım kısmından şifre değiştirme.
+- Ana sayfada müşterileri listeleme ve filtreleme.
+- Müşterinin detay hesaplarına erişme.
 
 
-
-
-## 📣 Introduction
-
-
-
-
-## 🔨 Technologies Used
+## 🔨 Kullandığım Teknolojiler
 
 - ReactJS
 - Redux
@@ -27,7 +25,7 @@ Project live demo link...
 - Vercel
 - Api
 
-## 📦 Getting Started
+## 📦 Başlarken
 
 First clone the project;
 ```
@@ -45,9 +43,9 @@ npm start & yarn start
 
 ```
 
-## 🔨 Usage
+## 🔨 Kullanım
 
-This is very easy! All you have to do is enter the name of the people name you are curious about.
+Sisteme kayıtlı mail adresiniz ile başarılı bir şekilde login olduktan sonra ana sayfada müşteri listesi sizi karşılayacak. Burada istediğiniz müşteriyi filtreleyebilirsiniz ve detay görüntüleyebilirsiniz. Account kısmından şifrenizi değiştirebilirsiniz. Login ekranında ise şifremi unuttum kısmına tıklayarak sisteme kayıtlı mail adresinizi yazarak şifre sıfırlama bağlantısı talep edebilirsiniz.
 
 
 ## 🤩 Screenshots
