@@ -55,6 +55,8 @@ Sisteme kayıtlı mail adresiniz ile başarılı bir şekilde login olduktan son
 
 ![localhost_3000_account](https://user-images.githubusercontent.com/80355473/170965124-f59ef83d-f7a1-499b-a884-7070a943c544.png)
 
+![localhost_3000_ForgotPasswordChange_param=7200AF0A-DDA9-4F37-9D55-A2D3F35FE256](https://user-images.githubusercontent.com/80355473/170967204-4c219031-b97f-4119-a73c-d1228aaea896.png)
+
 ![localhost_3000_account](https://user-images.githubusercontent.com/80355473/170965414-8386842b-9aef-4c76-b3dc-68afcf606f89.png)
 
 ![localhost_3000_account](https://user-images.githubusercontent.com/80355473/170965558-a6a7eb43-76ef-48bf-9857-a8b4bab6cf2c.png)
