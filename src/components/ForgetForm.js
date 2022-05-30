@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import loginIcon from '../../src/assets/login.svg'
-import './deneme.css'
+
 
 const ForgetForm = ( { handleSubmit, setForgetEmail } ) => {
   return (
@@ -11,7 +11,7 @@ const ForgetForm = ( { handleSubmit, setForgetEmail } ) => {
             <Row className = 'mt-5 shadow p-3 mb-5 bg-white rounded m-auto'>
                 <Col lg={5} md={6} sm={12} className='p-5 m-auto'>
                     <img 
-                        alt         =   'image'
+                        alt         =   'loginIcon'
                         src         =   { loginIcon } 
                         className   =   'w-100 rounded mx-auto d-block mt-5' 
                     />

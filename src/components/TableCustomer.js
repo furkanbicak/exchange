@@ -1,6 +1,6 @@
 import { Badge, Table } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import './deneme.css'
+
 
 const TableCustomer = ( { customer } ) => {
 
@@ -15,7 +15,7 @@ const TableCustomer = ( { customer } ) => {
 
     return (
         <div className = 'mb-5 mt-5 m-auto shadow p-3 mb-5 bg-white rounded'>
-            <Table hover id='height'>
+            <Table hover style={{ borderCollapse: "separate", borderSpacing:"0 20px"}}>
                 <thead>
                     <tr>
                         <th className = 'w-20'>ID</th>
