@@ -13,6 +13,7 @@ const Login = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const location = useLocation()
+
     const from = location.state?.from?.pathname || '/home'
 
 
@@ -29,61 +30,59 @@ const Login = () => {
 
         try {
             const response = await axios.post(URL.login, formData, { 
-                'content-type': 'multipart/form-data' 
+                    'content-type': 'multipart/form-data' 
             })
 
-            const isSuccess =  response?.data.IsSuccess
+            const isSuccess =  response?.data.IsSuccess 
             const accessToken = response?.data.Result.AccessToken
-
-            //? Token decode edilir.
-            const jwtDecoded = jwt(accessToken)
-
-
-            dispatch({
-                type:'SET_TOKEN',
-                payload:accessToken
-            })
-
-            dispatch({
-                type:'SET_ARR',
-                payload: jwtDecoded
-            })
-         
 
             //?Auth Context Provider'a bilgiler set edilir.
             setAuth({ user, password, accessToken, isSuccess })
-           
+            
             navigate(from, { replace : true })
 
 
-            //? Alert giriş başarılı mesaj.
-           if (isSuccess === true) {
-            Swal.fire({
-                timer               :   1500,
-                showConfirmButton   :   false,
-                icon                :   'success',
-                position            :   'top-end',
-                title               :   'Giriş başarılı. Hoşgeldin.🤩',
-            })
-           } else {
-            Swal.fire({
-                timer               :   1500,
-                showConfirmButton   :   false,
-                icon                :   'error',
-                position            :   'top-end',
-                title               :   response?.data.Result.Message,
-                })
-           }
+            //? Alert giriş başarılı ise redux ve allert.
+            if (isSuccess === true) {
+                //? Token decode edilir.
+                const jwtDecoded = jwt(accessToken)
 
+                dispatch({
+                    type:'SET_TOKEN',
+                    payload:accessToken
+                })
+                
+                dispatch({
+                    type:'SET_ARR',
+                    payload: jwtDecoded
+                })
+
+                Swal.fire({
+                    timer               :   1500,
+                    showConfirmButton   :   false,
+                    icon                :   'success',
+                    position            :   'top-end',
+                    title               :   'Giriş başarılı. Hoşgeldin.🤩',
+                })
+            } else {
+                Swal.fire({
+                    timer               :   1500,
+                    showConfirmButton   :   false,
+                    icon                :   'error',
+                    position            :   'top-end',
+                    title               :   response?.data.Result.Message,
+                })
+            }
+            
         } catch (err) {
-            console.log('No Server Response',err)
+            console.log('Data Yok!',err)
         }
     }
 
 
-    return (
-        <AuthForm loginSubmit = { loginSubmit } />
-  )
+        return (
+            <AuthForm loginSubmit = { loginSubmit } />
+    )
 }
 
 export default Login
