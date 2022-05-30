@@ -1,16 +1,22 @@
 import { useLocation, Navigate, Outlet } from "react-router-dom"
 import useAuth from "../hooks/useAuth"
+import { useSelector } from 'react-redux'
 
 const RequireAuth = () => {
+
+    //? AuthContext provider (user ve token).
+    //! Kontrol burdan da sağlanabilirdi.
     const { auth } = useAuth()
+
     const location = useLocation()
 
-    console.log("Auth",auth)
+    const state = useSelector((state => state))
+    
     
     return (
-        auth?.accessToken
+       state?.accesToken.accesToken
             ? <Outlet />
-            : auth?.user
+            : state?.arr.arr.email
                 ? <Navigate to="/unauthorized" state={{ from: location }} replace />
                 : <Navigate to="/login" state={{ from: location }} replace />
     );
