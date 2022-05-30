@@ -6,8 +6,8 @@ const TableCustomerAccount = ( { customerAccount } ) => {
 
     
   return (
-    <div className='w-75 mb-5 mt-5 m-auto shadow p-3 mb-5 bg-white rounded table-responsive'>
-        <Table hover >
+    <div className='mb-5 mt-5 m-auto shadow p-3 mb-5 bg-white rounded table-responsive'>
+        <Table hover style={{ borderCollapse: "separate", borderSpacing:"0 20px"}}>
             <thead>
                 <tr>
                     <th className = 'w-20'>ID</th>
