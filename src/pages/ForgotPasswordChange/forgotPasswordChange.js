@@ -1,10 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 import ForgotChangePasswordForm from '../../components/ForgotChangePasswordForm'
 import { forgotChangePassword } from '../../services/forgotChangePassword'
 
 
 const ForgotPasswordChange = () => {
+
+    const navigate = useNavigate();
+
 
     //? Mailden gelen url'deki 'param' keyinin value değerini yakalar.
     const urlParams = new URLSearchParams(window.location.search)
@@ -28,7 +32,7 @@ const ForgotPasswordChange = () => {
                 showConfirmButton: false,
                 timer: 1500
             })
-        
+            navigate('/')
         } 
         //? İşlem başarısız ise error alert.
         else {

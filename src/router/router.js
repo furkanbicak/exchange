@@ -16,19 +16,23 @@ const Router = () => {
     return (
         <>
             <Routes>
-                //? Punlic routes
-                <Route path='/' element={<Layout />}>
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/forgotPassword" element={<ForgotPassword />} />
-                    <Route path="/ForgotPasswordChange" element={<ForgotPasswordChange />} />
-                    <Route path="/unauthorized" element={<Unauthorized />} />
-                </Route>
+                <Route path="/" element={<Layout />}>
+                    {/* //? Punlic routes */}
+                    <Route path='/' element={<Login />} />
+                    <Route path='/forgotPassword' element={<ForgotPassword />} />
+                    <Route path='/ForgotPasswordChange' element={<ForgotPasswordChange />} />
+                    <Route path='/unauthorized' element={<Unauthorized />} />
                 
-                //? Private routes 
-                <Route element={<RequireAuth />}>
-                    <Route path="/home" element={<Home />} />
-                    <Route path="/account" element={<Account />} />
-                    <Route path="/table-account-list/:CustomerId" element={<CustomerAccountList />} />
+                
+                    {/* //? Private routes  */}
+                    <Route element={<RequireAuth />}>
+                        <Route path='/home' element={<Home />} />
+                        <Route path='/account' element={<Account />} />
+                        <Route path='/table-account-list/:CustomerId' element={<CustomerAccountList />} />
+                    </Route>
+
+                     {/* catch all */}
+                    <Route path="*" element={<Unauthorized />} />
                 </Route>
             </Routes>
         </>
