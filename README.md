@@ -52,5 +52,8 @@ This is very easy! All you have to do is enter the name of the people name you a
 
 ## 🤩 Screenshots
 ![localhost_3000_home](https://user-images.githubusercontent.com/80355473/170902590-6bce806d-fbf6-4094-a7bf-c74449a77d12.png)
+![localhost_3000_forgotPassword](https://user-images.githubusercontent.com/80355473/170910524-6607d252-0463-4b14-a810-31ef9c440480.png)
+
+
 
 
